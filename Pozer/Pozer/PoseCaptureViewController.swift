@@ -18,6 +18,7 @@ import VideoToolbox
 
 
 class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    var  isAutoshootEnabled = false
     @IBOutlet weak var imgV: UIImageView!
     @IBOutlet weak var voiceBtn: UIButton!
     @IBOutlet var arView: ARView!
@@ -356,12 +357,17 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
     
     @IBAction func magicButtonPushed(_ sender: Any) {
         
-        switch self.magicButton.isSelected {
+        isAutoshootEnabled = !isAutoshootEnabled
+        
+        switch isAutoshootEnabled {
         case true:
-            self.magicButton.isSelected = false
-        case false:
             self.magicButton.isSelected = true
+            
+        case false:
+            self.magicButton.isSelected = false
+            
         }
+
     }
     
     func photoLibrary()
