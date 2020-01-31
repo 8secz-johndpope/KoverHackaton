@@ -459,6 +459,9 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
     }
     
 
+    @IBAction func debugAction(_ sender: Any) {
+        
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
