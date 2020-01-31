@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A368D5723E1DB01005659B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A368D5623E1DB01005659B7 /* AppDelegate.swift */; };
+		8A368D5923E1DB01005659B7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A368D5823E1DB01005659B7 /* art.scnassets */; };
+		8A368D5E23E1DB01005659B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A368D5C23E1DB01005659B7 /* Main.storyboard */; };
+		8A368D6023E1DB04005659B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A368D5F23E1DB04005659B7 /* Assets.xcassets */; };
+		8A368D6323E1DB04005659B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A368D6123E1DB04005659B7 /* LaunchScreen.storyboard */; };
+		8A63A21F23E353A300144229 /* cover.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A63A21E23E353A300144229 /* cover.json */; };
+		8A63A22123E3608600144229 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A63A22023E3608600144229 /* SubViewController.swift */; };
+		8AF64F6B23E2E07800B4E2CA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F6A23E2E07800B4E2CA /* StartViewController.swift */; };
+		8AF64F6D23E2E08B00B4E2CA /* PoseCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F6C23E2E08B00B4E2CA /* PoseCaptureViewController.swift */; };
+		8AF64F6F23E2EE4B00B4E2CA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F6E23E2EE4B00B4E2CA /* CollectionViewCell.swift */; };
+		8AF64F7123E2F5CE00B4E2CA /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F7023E2F5CE00B4E2CA /* Pose.swift */; };
+		8AF64F7323E30FCF00B4E2CA /* GalleryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F7223E30FCF00B4E2CA /* GalleryHelper.swift */; };
+		8AF64F7623E3101B00B4E2CA /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF64F7523E3101B00B4E2CA /* Photos.framework */; };
+		8AF64F7823E3381C00B4E2CA /* PostSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F7723E3381C00B4E2CA /* PostSplashViewController.swift */; };
+		F213D8E89BDA7938F685012D /* Pods_Pozer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9C463F0DF6EB0351B2CB0B /* Pods_Pozer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29854C8CCCD05862C72B9BA7 /* Pods-Pozer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozer.release.xcconfig"; path = "Target Support Files/Pods-Pozer/Pods-Pozer.release.xcconfig"; sourceTree = "<group>"; };
+		7B9C463F0DF6EB0351B2CB0B /* Pods_Pozer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pozer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A368D5323E1DB01005659B7 /* Pozer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pozer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A368D5623E1DB01005659B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A368D5823E1DB01005659B7 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		8A368D5D23E1DB01005659B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A368D5F23E1DB04005659B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A368D6223E1DB04005659B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A368D6423E1DB04005659B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A63A21E23E353A300144229 /* cover.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cover.json; sourceTree = "<group>"; };
+		8A63A22023E3608600144229 /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		8AF64F6A23E2E07800B4E2CA /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		8AF64F6C23E2E08B00B4E2CA /* PoseCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseCaptureViewController.swift; sourceTree = "<group>"; };
+		8AF64F6E23E2EE4B00B4E2CA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		8AF64F7023E2F5CE00B4E2CA /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
+		8AF64F7223E30FCF00B4E2CA /* GalleryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryHelper.swift; sourceTree = "<group>"; };
+		8AF64F7523E3101B00B4E2CA /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		8AF64F7723E3381C00B4E2CA /* PostSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSplashViewController.swift; sourceTree = "<group>"; };
+		B66800C78A25BDFE033D532C /* Pods-Pozer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozer.debug.xcconfig"; path = "Target Support Files/Pods-Pozer/Pods-Pozer.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A368D5023E1DB01005659B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AF64F7623E3101B00B4E2CA /* Photos.framework in Frameworks */,
+				F213D8E89BDA7938F685012D /* Pods_Pozer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BBEB6260E962C155455A3C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B66800C78A25BDFE033D532C /* Pods-Pozer.debug.xcconfig */,
+				29854C8CCCD05862C72B9BA7 /* Pods-Pozer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8A368D4A23E1DB01005659B7 = {
+			isa = PBXGroup;
+			children = (
+				8A368D5523E1DB01005659B7 /* Pozer */,
+				8A368D5423E1DB01005659B7 /* Products */,
+				8AF64F7423E3101B00B4E2CA /* Frameworks */,
+				4BBEB6260E962C155455A3C0 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		8A368D5423E1DB01005659B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A368D5323E1DB01005659B7 /* Pozer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A368D5523E1DB01005659B7 /* Pozer */ = {
+			isa = PBXGroup;
+			children = (
+				8A368D5623E1DB01005659B7 /* AppDelegate.swift */,
+				8A368D5823E1DB01005659B7 /* art.scnassets */,
+				8AF64F6A23E2E07800B4E2CA /* StartViewController.swift */,
+				8AF64F7723E3381C00B4E2CA /* PostSplashViewController.swift */,
+				8AF64F6C23E2E08B00B4E2CA /* PoseCaptureViewController.swift */,
+				8A63A22023E3608600144229 /* SubViewController.swift */,
+				8AF64F6E23E2EE4B00B4E2CA /* CollectionViewCell.swift */,
+				8AF64F7023E2F5CE00B4E2CA /* Pose.swift */,
+				8A368D5C23E1DB01005659B7 /* Main.storyboard */,
+				8AF64F7223E30FCF00B4E2CA /* GalleryHelper.swift */,
+				8A368D5F23E1DB04005659B7 /* Assets.xcassets */,
+				8A368D6123E1DB04005659B7 /* LaunchScreen.storyboard */,
+				8A368D6423E1DB04005659B7 /* Info.plist */,
+				8A63A21E23E353A300144229 /* cover.json */,
+			);
+			path = Pozer;
+			sourceTree = "<group>";
+		};
+		8AF64F7423E3101B00B4E2CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AF64F7523E3101B00B4E2CA /* Photos.framework */,
+				7B9C463F0DF6EB0351B2CB0B /* Pods_Pozer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A368D5223E1DB01005659B7 /* Pozer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A368D6723E1DB04005659B7 /* Build configuration list for PBXNativeTarget "Pozer" */;
+			buildPhases = (
+				0C1BD1B0451F5C248141A47B /* [CP] Check Pods Manifest.lock */,
+				8A368D4F23E1DB01005659B7 /* Sources */,
+				8A368D5023E1DB01005659B7 /* Frameworks */,
+				8A368D5123E1DB01005659B7 /* Resources */,
+				B24264AAA9679CAB52EA7FCE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pozer;
+			productName = Pozer;
+			productReference = 8A368D5323E1DB01005659B7 /* Pozer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A368D4B23E1DB01005659B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "AP Raman Kananovich";
+				TargetAttributes = {
+					8A368D5223E1DB01005659B7 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8A368D4E23E1DB01005659B7 /* Build configuration list for PBXProject "Pozer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A368D4A23E1DB01005659B7;
+			productRefGroup = 8A368D5423E1DB01005659B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A368D5223E1DB01005659B7 /* Pozer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A368D5123E1DB01005659B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A368D5923E1DB01005659B7 /* art.scnassets in Resources */,
+				8A368D6323E1DB04005659B7 /* LaunchScreen.storyboard in Resources */,
+				8A368D6023E1DB04005659B7 /* Assets.xcassets in Resources */,
+				8A368D5E23E1DB01005659B7 /* Main.storyboard in Resources */,
+				8A63A21F23E353A300144229 /* cover.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C1BD1B0451F5C248141A47B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pozer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B24264AAA9679CAB52EA7FCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pozer/Pods-Pozer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pozer/Pods-Pozer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pozer/Pods-Pozer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A368D4F23E1DB01005659B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AF64F6D23E2E08B00B4E2CA /* PoseCaptureViewController.swift in Sources */,
+				8A368D5723E1DB01005659B7 /* AppDelegate.swift in Sources */,
+				8AF64F6F23E2EE4B00B4E2CA /* CollectionViewCell.swift in Sources */,
+				8A63A22123E3608600144229 /* SubViewController.swift in Sources */,
+				8AF64F6B23E2E07800B4E2CA /* StartViewController.swift in Sources */,
+				8AF64F7323E30FCF00B4E2CA /* GalleryHelper.swift in Sources */,
+				8AF64F7823E3381C00B4E2CA /* PostSplashViewController.swift in Sources */,
+				8AF64F7123E2F5CE00B4E2CA /* Pose.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8A368D5C23E1DB01005659B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A368D5D23E1DB01005659B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A368D6123E1DB04005659B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A368D6223E1DB04005659B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A368D6523E1DB04005659B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A368D6623E1DB04005659B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A368D6823E1DB04005659B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B66800C78A25BDFE033D532C /* Pods-Pozer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HJSF27K7R5;
+				INFOPLIST_FILE = Pozer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RomanPersonalTests.Pozer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A368D6923E1DB04005659B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29854C8CCCD05862C72B9BA7 /* Pods-Pozer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HJSF27K7R5;
+				INFOPLIST_FILE = Pozer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RomanPersonalTests.Pozer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A368D4E23E1DB01005659B7 /* Build configuration list for PBXProject "Pozer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A368D6523E1DB04005659B7 /* Debug */,
+				8A368D6623E1DB04005659B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A368D6723E1DB04005659B7 /* Build configuration list for PBXNativeTarget "Pozer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A368D6823E1DB04005659B7 /* Debug */,
+				8A368D6923E1DB04005659B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A368D4B23E1DB01005659B7 /* Project object */;
+}

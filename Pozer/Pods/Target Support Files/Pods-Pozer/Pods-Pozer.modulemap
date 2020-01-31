@@ -1,0 +1,6 @@
+framework module Pods_Pozer {
+  umbrella header "Pods-Pozer-umbrella.h"
+
+  export *
+  module * { export * }
+}
