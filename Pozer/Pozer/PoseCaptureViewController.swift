@@ -51,6 +51,9 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
         default: break
             
         }
+        
+        okImage.isHidden = true
+        crossImage.isHidden = true
     }
     
     var character: BodyTrackedEntity?
@@ -214,8 +217,11 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
                     }
                     
                     if(maxDelta < 0.16) {
-                        self.staticCharacter?.model?.materials = [trueMaterial]
+//                        self.staticCharacter?.model?.materials = [trueMaterial]
+                        self.character?.model?.materials = [trueMaterial]
                         poseValidForCaprute = true
+                        okImage.isHidden = false
+                        crossImage.isHidden = true
                         
                         if !autoCaptureInitiated, isAutoshootEnabled {
                             autoCaptureInitiated = true
@@ -224,11 +230,11 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
                                 if(self.autocaptureCounter == 30) {
                                     print("make photo")
                                     DispatchQueue.main.async {
-                                        self.captureFrame(nil)
+                                        self.captureFrame(self)
                                     }
                                 }
                                 
-                                if self.autocaptureCounter >= 80 {
+                                if self.autocaptureCounter >= 90 {
                                     self.autocaptureCounter = 0
                                     self.autoCaptureInitiated = false
                                     self.autoCaptureTimer?.invalidate()
@@ -236,8 +242,12 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
                             })
                         }
                     } else {
-                        self.staticCharacter?.model?.materials = [falseMaterial]
+//                        self.staticCharacter?.model?.materials = [falseMaterial]
+                        self.character?.model?.materials = [falseMaterial]
                         poseValidForCaprute = false
+                        okImage.isHidden = true
+                        crossImage.isHidden = false
+
                         if autoCaptureInitiated, isAutoshootEnabled {
                             autocaptureCounter = 0
                             autoCaptureInitiated = false
@@ -322,8 +332,8 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
             if let character = character as? BodyTrackedEntity {
                 character.scale = [1.0, 1.0, 1.0]
                 self.character = character
-                //                self.character?.model?.materials = [self.falseMaterial]
-                self.character?.isEnabled = false
+                self.character?.model?.materials = [self.falseMaterial]
+//                self.character?.isEnabled = false
                 cancellable?.cancel()
             } else {
                 print("Error: Unable to load model as BodyTrackedEntity")
@@ -341,8 +351,8 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
             if let character = character as? ModelEntity {
                 character.scale = [1.0, 1.0, 1.0]
                 self.staticCharacter = character
-                self.staticCharacter?.isEnabled = true
-                self.staticCharacter?.model?.materials = [self.falseMaterial]
+                self.staticCharacter?.isEnabled = false
+//                self.staticCharacter?.model?.materials = [self.falseMaterial]
                 cancellable2?.cancel()
             } else {
                 print("Error: Unable to load model as BodyTrackedEntity")
