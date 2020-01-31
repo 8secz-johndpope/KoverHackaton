@@ -199,7 +199,7 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
                         //                        print(String(format: "Translation: %.6f | %.6f | %.6f", currentTransform.translation.x, staticTransforms[index].translation.x, deltaX))
                     }
                     
-                    if(maxDelta < 0.08) {
+                    if(maxDelta < 0.15) {
                         self.staticCharacter?.model?.materials = [trueMaterial]
                     } else {
                         self.staticCharacter?.model?.materials = [falseMaterial]

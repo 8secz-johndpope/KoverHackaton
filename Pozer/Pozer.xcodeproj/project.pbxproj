@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8A282D5923E425FE00E49542 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A282D5823E425FE00E49542 /* ARKit.framework */; };
-		8A282D5B23E4286300E49542 /* pose.data in Resources */ = {isa = PBXBuildFile; fileRef = 8A282D5A23E4286300E49542 /* pose.data */; };
 		8A368D5723E1DB01005659B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A368D5623E1DB01005659B7 /* AppDelegate.swift */; };
 		8A368D5923E1DB01005659B7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A368D5823E1DB01005659B7 /* art.scnassets */; };
 		8A368D5E23E1DB01005659B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A368D5C23E1DB01005659B7 /* Main.storyboard */; };
@@ -24,6 +23,7 @@
 		8AF64F7323E30FCF00B4E2CA /* GalleryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F7223E30FCF00B4E2CA /* GalleryHelper.swift */; };
 		8AF64F7623E3101B00B4E2CA /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF64F7523E3101B00B4E2CA /* Photos.framework */; };
 		8AF64F7823E3381C00B4E2CA /* PostSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F7723E3381C00B4E2CA /* PostSplashViewController.swift */; };
+		996A8A7A23E4440500C93D06 /* pose.data in Resources */ = {isa = PBXBuildFile; fileRef = 996A8A7923E4440500C93D06 /* pose.data */; };
 		F213D8E89BDA7938F685012D /* Pods_Pozer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9C463F0DF6EB0351B2CB0B /* Pods_Pozer.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,6 @@
 		29854C8CCCD05862C72B9BA7 /* Pods-Pozer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozer.release.xcconfig"; path = "Target Support Files/Pods-Pozer/Pods-Pozer.release.xcconfig"; sourceTree = "<group>"; };
 		7B9C463F0DF6EB0351B2CB0B /* Pods_Pozer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pozer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A282D5823E425FE00E49542 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
-		8A282D5A23E4286300E49542 /* pose.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = pose.data; path = Pozer/pose.data; sourceTree = "<group>"; };
 		8A368D5323E1DB01005659B7 /* Cover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A368D5623E1DB01005659B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A368D5823E1DB01005659B7 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		8AF64F7223E30FCF00B4E2CA /* GalleryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryHelper.swift; sourceTree = "<group>"; };
 		8AF64F7523E3101B00B4E2CA /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		8AF64F7723E3381C00B4E2CA /* PostSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSplashViewController.swift; sourceTree = "<group>"; };
+		996A8A7923E4440500C93D06 /* pose.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pose.data; sourceTree = "<group>"; };
 		B66800C78A25BDFE033D532C /* Pods-Pozer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozer.debug.xcconfig"; path = "Target Support Files/Pods-Pozer/Pods-Pozer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				8A9B5EDF23E429DE00143F9F /* character */,
-				8A282D5A23E4286300E49542 /* pose.data */,
+				996A8A7923E4440500C93D06 /* pose.data */,
 				8A368D5523E1DB01005659B7 /* Pozer */,
 				8A368D5423E1DB01005659B7 /* Products */,
 				8AF64F7423E3101B00B4E2CA /* Frameworks */,
@@ -188,11 +188,11 @@
 			files = (
 				8A368D5923E1DB01005659B7 /* art.scnassets in Resources */,
 				8A368D6323E1DB04005659B7 /* LaunchScreen.storyboard in Resources */,
-				8A282D5B23E4286300E49542 /* pose.data in Resources */,
 				8A368D6023E1DB04005659B7 /* Assets.xcassets in Resources */,
 				8A368D5E23E1DB01005659B7 /* Main.storyboard in Resources */,
 				8A9B5EE023E429DE00143F9F /* character in Resources */,
 				8A63A21F23E353A300144229 /* cover.json in Resources */,
+				996A8A7A23E4440500C93D06 /* pose.data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,14 +398,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HJSF27K7R5;
+				DEVELOPMENT_TEAM = 67QST72FQA;
 				INFOPLIST_FILE = Pozer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = RomanPersonalTests.Pozer;
+				PRODUCT_BUNDLE_IDENTIFIER = MaxPersonalTests.Pozer;
 				PRODUCT_NAME = Cover;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -418,14 +418,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HJSF27K7R5;
+				DEVELOPMENT_TEAM = 67QST72FQA;
 				INFOPLIST_FILE = Pozer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = RomanPersonalTests.Pozer;
+				PRODUCT_BUNDLE_IDENTIFIER = MaxPersonalTests.Pozer;
 				PRODUCT_NAME = Cover;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
