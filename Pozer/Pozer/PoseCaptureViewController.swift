@@ -12,16 +12,20 @@ import RealityKit
 import ARKit
 import PhotosUI
 import Combine
+import AVFoundation
+import VideoToolbox
+
 
 
 class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     @IBOutlet weak var imgV: UIImageView!
     @IBOutlet weak var voiceBtn: UIButton!
     @IBOutlet var arView: ARView!
-    
+    var imagePicker:UIImagePickerController!
     @IBOutlet weak var magicButton: UIButton!
     @IBOutlet weak var galleryButton: UIButton!
     
+    @IBOutlet weak var flashView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -321,7 +325,30 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
      return node
      }
      */
+    @IBAction func captureFrame(_ sender: Any) {
+        
+        let bufer = arView.session.currentFrame?.capturedImage
+
+        let image = UIImage(pixelBuffer: bufer!)
+        if let img = image{
+            UIImageWriteToSavedPhotosAlbum(img, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+            UIView.animate(withDuration: 0.05, animations: {
+                self.flashView.alpha = 1
+            }) { (comp) in
+                self.flashView.alpha = 0
+            }
+        }
+    }
     
+        @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            print("dsfdfs")
+        } else {
+            getLastImage()
+        }
+    }
+
 
     
     @IBAction func magicButtonPushed(_ sender: Any) {
@@ -380,6 +407,8 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
         }
     }
     
+
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }
@@ -408,4 +437,19 @@ extension Transform {
         self.init(matrix: matrix)
         
     }
+}
+
+extension UIImage {
+    public convenience init?(pixelBuffer: CVPixelBuffer) {
+        var cgImage: CGImage?
+        VTCreateCGImageFromCVPixelBuffer(pixelBuffer, options: nil, imageOut: &cgImage)
+
+        guard let cgiImage = cgImage else {
+            return nil
+        }
+
+        self.init(cgImage: cgiImage, scale: 1, orientation: .right)
+    }
+    
+
 }
