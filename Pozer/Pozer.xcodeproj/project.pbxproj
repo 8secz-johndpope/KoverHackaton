@@ -17,6 +17,7 @@
 		8A63A21F23E353A300144229 /* cover.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A63A21E23E353A300144229 /* cover.json */; };
 		8A63A22123E3608600144229 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A63A22023E3608600144229 /* SubViewController.swift */; };
 		8A9B5EE023E429DE00143F9F /* character in Resources */ = {isa = PBXBuildFile; fileRef = 8A9B5EDF23E429DE00143F9F /* character */; };
+		8A9B5EE223E434BE00143F9F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9B5EE123E434BE00143F9F /* AVFoundation.framework */; };
 		8AF64F6B23E2E07800B4E2CA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F6A23E2E07800B4E2CA /* StartViewController.swift */; };
 		8AF64F6D23E2E08B00B4E2CA /* PoseCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F6C23E2E08B00B4E2CA /* PoseCaptureViewController.swift */; };
 		8AF64F6F23E2EE4B00B4E2CA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF64F6E23E2EE4B00B4E2CA /* CollectionViewCell.swift */; };
@@ -42,6 +43,7 @@
 		8A63A21E23E353A300144229 /* cover.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cover.json; sourceTree = "<group>"; };
 		8A63A22023E3608600144229 /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		8A9B5EDF23E429DE00143F9F /* character */ = {isa = PBXFileReference; lastKnownFileType = folder; path = character; sourceTree = "<group>"; };
+		8A9B5EE123E434BE00143F9F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8AF64F6A23E2E07800B4E2CA /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		8AF64F6C23E2E08B00B4E2CA /* PoseCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseCaptureViewController.swift; sourceTree = "<group>"; };
 		8AF64F6E23E2EE4B00B4E2CA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A9B5EE223E434BE00143F9F /* AVFoundation.framework in Frameworks */,
 				8A282D5923E425FE00E49542 /* ARKit.framework in Frameworks */,
 				8AF64F7623E3101B00B4E2CA /* Photos.framework in Frameworks */,
 				F213D8E89BDA7938F685012D /* Pods_Pozer.framework in Frameworks */,
@@ -119,6 +122,7 @@
 		8AF64F7423E3101B00B4E2CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A9B5EE123E434BE00143F9F /* AVFoundation.framework */,
 				8A282D5823E425FE00E49542 /* ARKit.framework */,
 				8AF64F7523E3101B00B4E2CA /* Photos.framework */,
 				7B9C463F0DF6EB0351B2CB0B /* Pods_Pozer.framework */,

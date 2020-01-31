@@ -11,7 +11,7 @@
         <!--Pose Capture View Controller-->
         <scene sceneID="Gk1-Ie-d6Y">
             <objects>
-                <viewController storyboardIdentifier="PoseCaptureViewController" id="Fem-4Q-jbh" customClass="PoseCaptureViewController" customModule="Pozer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PoseCaptureViewController" id="Fem-4Q-jbh" customClass="PoseCaptureViewController" customModule="Cover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="byh-AD-kz1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                                         <rect key="frame" x="172" y="50" width="70" height="70"/>
                                         <state key="normal" image="shoot"/>
                                         <connections>
-                                            <action selector="grabAction:" destination="Fem-4Q-jbh" eventType="touchUpInside" id="HEh-Cb-bql"/>
+                                            <action selector="captureFrame:" destination="Fem-4Q-jbh" eventType="touchUpInside" id="TJB-XL-z98"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -99,6 +99,10 @@
                                     <constraint firstAttribute="trailing" secondItem="X5J-uG-ysN" secondAttribute="trailing" id="erF-gk-gLe"/>
                                 </constraints>
                             </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMU-1m-qVM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -106,11 +110,15 @@
                             <constraint firstItem="3Cj-wr-iUv" firstAttribute="top" secondItem="hIX-Wj-cif" secondAttribute="bottom" id="6mp-rw-yy9"/>
                             <constraint firstItem="wCH-d4-Vf5" firstAttribute="top" secondItem="uRS-dj-ffw" secondAttribute="top" id="8yL-AU-7RQ"/>
                             <constraint firstItem="wCH-d4-Vf5" firstAttribute="leading" secondItem="uRS-dj-ffw" secondAttribute="leading" id="OAs-67-hIH"/>
+                            <constraint firstAttribute="trailing" secondItem="SMU-1m-qVM" secondAttribute="trailing" id="Tcz-ui-OyD"/>
+                            <constraint firstItem="SMU-1m-qVM" firstAttribute="top" secondItem="byh-AD-kz1" secondAttribute="top" id="Z2z-8C-8kH"/>
+                            <constraint firstItem="SMU-1m-qVM" firstAttribute="leading" secondItem="byh-AD-kz1" secondAttribute="leading" id="dol-07-XQP"/>
                             <constraint firstItem="uRS-dj-ffw" firstAttribute="trailing" secondItem="hIX-Wj-cif" secondAttribute="trailing" id="j3M-5j-BJo"/>
                             <constraint firstItem="wCH-d4-Vf5" firstAttribute="trailing" secondItem="uRS-dj-ffw" secondAttribute="trailing" id="jsu-Wj-prJ"/>
                             <constraint firstItem="hIX-Wj-cif" firstAttribute="top" secondItem="wCH-d4-Vf5" secondAttribute="bottom" constant="8" symbolic="YES" id="piy-9q-u8v"/>
                             <constraint firstItem="3Cj-wr-iUv" firstAttribute="bottom" secondItem="uRS-dj-ffw" secondAttribute="bottom" id="pkT-Bo-hKQ"/>
                             <constraint firstItem="hIX-Wj-cif" firstAttribute="leading" secondItem="uRS-dj-ffw" secondAttribute="leading" id="raf-p9-8G2"/>
+                            <constraint firstAttribute="bottom" secondItem="SMU-1m-qVM" secondAttribute="bottom" id="sBq-5z-Pu1"/>
                             <constraint firstItem="uRS-dj-ffw" firstAttribute="trailing" secondItem="3Cj-wr-iUv" secondAttribute="trailing" id="ssJ-h5-vhT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uRS-dj-ffw"/>
@@ -118,6 +126,7 @@
                     <navigationItem key="navigationItem" id="KTG-TT-aNy"/>
                     <connections>
                         <outlet property="arView" destination="hIX-Wj-cif" id="grg-fe-Zs0"/>
+                        <outlet property="flashView" destination="SMU-1m-qVM" id="odN-NJ-5tw"/>
                         <outlet property="galleryButton" destination="Ihk-RP-Ej0" id="mcb-x3-AzL"/>
                         <outlet property="imgV" destination="qkk-qP-77p" id="UVi-ji-Bhw"/>
                         <outlet property="magicButton" destination="oxY-ih-hY9" id="6ac-Tk-Pf6"/>
@@ -131,7 +140,7 @@
         <!--Start View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="StartViewController" customModule="Pozer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="StartViewController" customModule="Cover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,7 +155,7 @@
                                     <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ed6-1y-IqX" customClass="CollectionViewCell" customModule="Pozer" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ed6-1y-IqX" customClass="CollectionViewCell" customModule="Cover" customModuleProvider="target">
                                         <rect key="frame" x="43.5" y="0.0" width="327" height="277"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Iee-hl-h8Q">
@@ -252,7 +261,7 @@
         <!--Post Splash View Controller-->
         <scene sceneID="geB-5C-lf7">
             <objects>
-                <viewController storyboardIdentifier="PostSplashViewController" modalPresentationStyle="fullScreen" id="tlf-Hv-dkG" customClass="PostSplashViewController" customModule="Pozer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostSplashViewController" modalPresentationStyle="fullScreen" id="tlf-Hv-dkG" customClass="PostSplashViewController" customModule="Cover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mmf-7c-rDJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,7 +303,7 @@
         <!--Sub View Controller-->
         <scene sceneID="0HM-5O-MlC">
             <objects>
-                <viewController id="fkc-6C-K6g" customClass="SubViewController" customModule="Pozer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fkc-6C-K6g" customClass="SubViewController" customModule="Cover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="meu-d6-GTv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
