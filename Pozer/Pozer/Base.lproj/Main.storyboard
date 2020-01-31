@@ -16,9 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="144" width="414" height="548"/>
-                            </arscnView>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIX-Wj-cif">
+                                <rect key="frame" x="0.0" y="152" width="414" height="540"/>
+                            </arView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cj-wr-iUv">
                                 <rect key="frame" x="0.0" y="692" width="414" height="170"/>
                                 <subviews>
@@ -42,6 +42,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RK6-Om-R0Y">
                                         <rect key="frame" x="172" y="50" width="70" height="70"/>
                                         <state key="normal" image="shoot"/>
+                                        <connections>
+                                            <action selector="grabAction:" destination="Fem-4Q-jbh" eventType="touchUpInside" id="HEh-Cb-bql"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,25 +102,25 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="uRS-dj-ffw" secondAttribute="leading" id="0Ry-se-XzR"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="uRS-dj-ffw" secondAttribute="trailing" id="5z3-n6-5wo"/>
                             <constraint firstItem="3Cj-wr-iUv" firstAttribute="leading" secondItem="uRS-dj-ffw" secondAttribute="leading" id="6cd-GC-lla"/>
+                            <constraint firstItem="3Cj-wr-iUv" firstAttribute="top" secondItem="hIX-Wj-cif" secondAttribute="bottom" id="6mp-rw-yy9"/>
                             <constraint firstItem="wCH-d4-Vf5" firstAttribute="top" secondItem="uRS-dj-ffw" secondAttribute="top" id="8yL-AU-7RQ"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="wCH-d4-Vf5" secondAttribute="bottom" id="Bye-Nd-rmx"/>
                             <constraint firstItem="wCH-d4-Vf5" firstAttribute="leading" secondItem="uRS-dj-ffw" secondAttribute="leading" id="OAs-67-hIH"/>
-                            <constraint firstItem="3Cj-wr-iUv" firstAttribute="top" secondItem="BrB-h1-WRS" secondAttribute="bottom" id="bCb-Sl-eAe"/>
+                            <constraint firstItem="uRS-dj-ffw" firstAttribute="trailing" secondItem="hIX-Wj-cif" secondAttribute="trailing" id="j3M-5j-BJo"/>
                             <constraint firstItem="wCH-d4-Vf5" firstAttribute="trailing" secondItem="uRS-dj-ffw" secondAttribute="trailing" id="jsu-Wj-prJ"/>
+                            <constraint firstItem="hIX-Wj-cif" firstAttribute="top" secondItem="wCH-d4-Vf5" secondAttribute="bottom" constant="8" symbolic="YES" id="piy-9q-u8v"/>
                             <constraint firstItem="3Cj-wr-iUv" firstAttribute="bottom" secondItem="uRS-dj-ffw" secondAttribute="bottom" id="pkT-Bo-hKQ"/>
+                            <constraint firstItem="hIX-Wj-cif" firstAttribute="leading" secondItem="uRS-dj-ffw" secondAttribute="leading" id="raf-p9-8G2"/>
                             <constraint firstItem="uRS-dj-ffw" firstAttribute="trailing" secondItem="3Cj-wr-iUv" secondAttribute="trailing" id="ssJ-h5-vhT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uRS-dj-ffw"/>
                     </view>
                     <navigationItem key="navigationItem" id="KTG-TT-aNy"/>
                     <connections>
+                        <outlet property="arView" destination="hIX-Wj-cif" id="grg-fe-Zs0"/>
                         <outlet property="galleryButton" destination="Ihk-RP-Ej0" id="mcb-x3-AzL"/>
                         <outlet property="imgV" destination="qkk-qP-77p" id="UVi-ji-Bhw"/>
                         <outlet property="magicButton" destination="oxY-ih-hY9" id="6ac-Tk-Pf6"/>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="diH-SO-5gs"/>
                         <outlet property="voiceBtn" destination="pmW-b7-V4E" id="uR4-mC-4MJ"/>
                     </connections>
                 </viewController>
@@ -130,11 +133,11 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="StartViewController" customModule="Pozer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mmh-Bn-evy">
-                                <rect key="frame" x="0.0" y="134" width="414" height="762"/>
+                                <rect key="frame" x="0.0" y="90" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="lAQ-93-PEM">
                                     <size key="itemSize" width="165" height="200"/>
@@ -192,7 +195,7 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbr-iI-J4T">
-                                <rect key="frame" x="0.0" y="44" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEy-cH-AjY">
                                         <rect key="frame" x="15" y="10" width="92" height="48"/>
@@ -340,6 +343,6 @@
         <image name="подписка" width="375" height="812"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FR0-B7-BmN"/>
+        <segue reference="uVK-hc-Cjn"/>
     </inferredMetricsTieBreakers>
 </document>

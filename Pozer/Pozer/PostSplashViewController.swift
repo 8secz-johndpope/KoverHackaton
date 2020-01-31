@@ -34,7 +34,7 @@ class PostSplashViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        animationView.animationSpeed = 0.8
+        animationView.animationSpeed = 1
         animationView.play { (comp) in
             self.performSegue(withIdentifier: "start", sender: self)
         }
