@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tlf-Hv-dkG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tlf-Hv-dkG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -119,7 +119,6 @@
                                     <constraint firstAttribute="width" constant="100" id="6xh-Bk-cut"/>
                                     <constraint firstAttribute="height" constant="100" id="sCP-Hw-QIt"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="debugAction:" destination="Fem-4Q-jbh" eventType="touchUpInside" id="Pjz-S6-9ft"/>
                                 </connections>
@@ -175,11 +174,11 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="StartViewController" customModule="Cover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mmh-Bn-evy">
-                                <rect key="frame" x="0.0" y="134" width="414" height="762"/>
+                                <rect key="frame" x="0.0" y="90" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="lAQ-93-PEM">
                                     <size key="itemSize" width="165" height="200"/>
@@ -196,14 +195,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lPD-fm-EGJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="200"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="277"/>
                                                 </imageView>
                                                 <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAO-1k-iy1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="200"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="277"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="premium" translatesAutoresizingMaskIntoConstraints="NO" id="fuI-F7-tTr">
-                                                    <rect key="frame" x="117" y="10" width="38" height="38"/>
+                                                    <rect key="frame" x="279" y="10" width="38" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="38" id="ASh-B9-req"/>
                                                         <constraint firstAttribute="height" constant="38" id="MDW-cY-7cT"/>
@@ -237,7 +236,7 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbr-iI-J4T">
-                                <rect key="frame" x="0.0" y="44" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEy-cH-AjY">
                                         <rect key="frame" x="15" y="10" width="92" height="48"/>
@@ -387,6 +386,6 @@
         <image name="подписка" width="375" height="812"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zoe-W6-Iwe"/>
+        <segue reference="uVK-hc-Cjn"/>
     </inferredMetricsTieBreakers>
 </document>

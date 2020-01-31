@@ -333,7 +333,7 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
                 character.scale = [1.0, 1.0, 1.0]
                 self.character = character
                 self.character?.model?.materials = [self.falseMaterial]
-//                self.character?.isEnabled = false
+                self.character?.isEnabled = false
                 cancellable?.cancel()
             } else {
                 print("Error: Unable to load model as BodyTrackedEntity")
@@ -460,7 +460,7 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
     
 
     @IBAction func debugAction(_ sender: Any) {
-        
+        character!.isEnabled = !character!.isEnabled
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
