@@ -68,6 +68,9 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
     
     let allowedDelta: Float = 0.1
     var poseValidForCaprute = false
+    var autoCaptureInitiated = false
+    var autoCaptureTimer: Timer? = nil
+    var autocaptureCounter = 0
     
     var floatArray:Array<Array<Array<Float>>> = Array<Array<Array<Float>>>.init()
     
@@ -213,12 +216,36 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
                     if(maxDelta < 0.16) {
                         self.staticCharacter?.model?.materials = [trueMaterial]
                         poseValidForCaprute = true
+                        
+                        if !autoCaptureInitiated, isAutoshootEnabled {
+                            autoCaptureInitiated = true
+                            autoCaptureTimer = Timer.scheduledTimer(withTimeInterval: 1.0/60, repeats: true, block: { (timer) in
+                                self.autocaptureCounter += 1
+                                if(self.autocaptureCounter == 30) {
+                                    print("make photo")
+                                    DispatchQueue.main.async {
+                                        self.captureFrame(nil)
+                                    }
+                                }
+                                
+                                if self.autocaptureCounter >= 80 {
+                                    self.autocaptureCounter = 0
+                                    self.autoCaptureInitiated = false
+                                    self.autoCaptureTimer?.invalidate()
+                                }
+                            })
+                        }
                     } else {
                         self.staticCharacter?.model?.materials = [falseMaterial]
                         poseValidForCaprute = false
+                        if autoCaptureInitiated, isAutoshootEnabled {
+                            autocaptureCounter = 0
+                            autoCaptureInitiated = false
+                            autoCaptureTimer?.invalidate()
+                        }
                     }
                     
-                    print(maxDelta)
+//                    print(maxDelta)
                 }
             }
         }
