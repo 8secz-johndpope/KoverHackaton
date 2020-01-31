@@ -27,6 +27,11 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
     @IBOutlet weak var galleryButton: UIButton!
     
     @IBOutlet weak var flashView: UIView!
+    
+    
+    @IBOutlet weak var okImage: UIImageView!
+    @IBOutlet weak var crossImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
