@@ -341,8 +341,8 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
         let image = UIImage(pixelBuffer: bufer!)
         if let img = image{
             UIImageWriteToSavedPhotosAlbum(img, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-            UIView.animate(withDuration: 0.05, animations: {
-                self.flashView.alpha = 1
+            UIView.animate(withDuration: 0.02, animations: {
+                self.flashView.alpha = 0.4
             }) { (comp) in
                 self.flashView.alpha = 0
             }
