@@ -346,7 +346,9 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
     }
     
     @IBAction func showGallery(_ sender: Any) {
-        self.photoLibrary()
+ //       self.photoLibrary()
+        UIApplication.shared.openURL(URL(string: "photos-redirect://")!)
+
     }
     
     func getLastImage(){
