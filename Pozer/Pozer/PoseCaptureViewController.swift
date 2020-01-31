@@ -67,6 +67,7 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
     var shouldDebugOutput: Bool = true
     
     let allowedDelta: Float = 0.1
+    var poseValidForCaprute = false
     
     var floatArray:Array<Array<Array<Float>>> = Array<Array<Array<Float>>>.init()
     
@@ -209,10 +210,12 @@ class PoseCaptureViewController: UIViewController, ARSessionDelegate, UIImagePic
                         //                        print(String(format: "Translation: %.6f | %.6f | %.6f", currentTransform.translation.x, staticTransforms[index].translation.x, deltaX))
                     }
                     
-                    if(maxDelta < 0.15) {
+                    if(maxDelta < 0.16) {
                         self.staticCharacter?.model?.materials = [trueMaterial]
+                        poseValidForCaprute = true
                     } else {
                         self.staticCharacter?.model?.materials = [falseMaterial]
+                        poseValidForCaprute = false
                     }
                     
                     print(maxDelta)
